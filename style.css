@@ -1,0 +1,196 @@
+@font-face {
+    font-family:"Roboto Bold" ;
+    src: url('Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: "Roboto Regular";
+    src: url('Roboto-Regular.ttf');
+}
+
+:root{
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%)
+}
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Regular";
+    color: var(--charcoal-grey);
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+  .image > picture >img{
+    width: 100%;
+  }
+  .text-email{
+    padding:1rem 1rem 1rem 1.6rem;
+  }
+  h1{
+    font-size: 2.3rem;
+    font-family: "Roboto Bold";
+    color: var(--dark-slate-grey);
+  }
+  .points{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .points > div{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+  }
+  form{
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.2rem;
+  }
+  .email-input{
+    outline: 1px solid var(--grey);
+    padding:0.8rem 0.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .error{
+    outline:1.5px solid red;
+    background-image: linear-gradient(0deg,rgba(240, 190, 190, 0.9),rgba(240, 190, 190, 0.9));
+  }
+  .error-mail{
+    background-image: linear-gradient(0deg,rgba(240, 190, 190, 0.9),rgba(240, 190, 190, 0.9));
+  }
+  input[type="email"]{
+    width:100%;
+    border:none;
+  }
+  input[type="email"]:focus{
+    outline:none;
+  }
+  .email-input:focus-within{
+    border: none;
+    outline:0.5px solid var(--charcoal-grey);
+  }
+  .labelling{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto Bold";
+  }
+  .labelling:first-child{
+    color:var(--dark-slate-grey)
+  }
+  .error-message{
+    color:rgb(240, 69, 69);
+  }
+  input[type="submit"],button{
+    border:none;
+    color:white;
+    background-image: linear-gradient(0deg,hsl(234, 29%, 20%) 90%,hsl(234, 29%, 20%));
+    margin-top:1rem;
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+  input[type="submit"]:hover,button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(90deg,hsl(3, 65%, 65%) 5%,var(--tomato));
+  }
+  .success-message{
+    padding:10rem 1rem 1rem 1.6rem;
+  }
+  .success-thanks{
+    line-height: 2.3rem;
+    margin-top:2.5rem;
+  }
+  .success-paragraph{
+    margin-top: 1.3rem;
+  }
+  .email-service{
+    font-weight: 700;
+  }
+  button{
+    margin-top:9.5rem;
+  }
+  /* JS stylings */
+  .inactive{
+    display: none;
+  }
+  @media screen and (min-width:750px){
+    body{
+      min-height: 100vh;
+      background-color: var(--charcoal-grey);
+    }
+    .container{
+      background-color: var(--White);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 0.7rem;
+      max-width: 950px;
+    }
+    .image{
+      grid-column: 2 / 3;
+      padding: 1.3rem;
+    }
+    .text-email{
+      grid-column: 1 / 2;
+      grid-row: 1/2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 1.3rem;
+      width: 85%;
+    }
+    h1{
+      font-size: 3.6rem;
+      text-align: center;
+    }
+    .description{
+      margin-top: 1.2rem;
+    }
+    .success-container{
+      max-width: 450px;
+      grid-template-columns:1fr;
+     
+    }
+    .success-message{
+      padding:2rem 2.5rem 3rem 2.5rem;
+    }
+    .success-message > .success-thanks{
+      text-align: left;
+      font-size: 3.4rem;
+      line-height: 3.3rem;
+    }
+    button{
+      margin-top: 1.8rem;
+    }
+  }
